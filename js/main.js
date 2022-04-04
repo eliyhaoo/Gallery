@@ -19,8 +19,9 @@ function renderProjects() {
             <img class="img-fluid" src="img/portfolio/${project.id}.png" alt="">
           </a>
           <div class="portfolio-caption">
-            <h4>${project.title}</h4>
-            <p class="text-muted">${project.labels[0]}</p>
+            <h4>${project.name}</h4>
+            <p class="text-muted">${project.title}</p>
+            <span class="badge badge-info">${project.labels[0]}</span> <span class="badge badge-info">${project.labels[1]}</span> <span class="badge badge-info">${project.labels[2]}</span>  
           </div>
         </div>
    ` 
@@ -36,15 +37,12 @@ function onClickedProject(projId){
 }
 
 function updateModal(project){
-  console.log('project in update', project);
-  console.log('project in update',project);
-  $('.modal-body h2').text(project.title)
-  console.log(project.desc);
+  $('.modal-body h2').text(project.name)
   $('.modal-body p.item-intro').text(project.desc)
   $('.modal-body img').attr('src',`img/portfolio/${project.id}.png`)
   $('.modal-body .date').text(_getDate(project.publishedAt))
   $('.modal-body .check-out').attr('href',project.url)
-  console.log(project.publishedAt);
+
   
 }
 
