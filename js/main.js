@@ -49,21 +49,16 @@ function updateModal(project){
 }
 
 function onSubmitForm(){
-  // ev.preventDefault()
   var email = $('.contact input[id=defaultContactFormEmail]').val()
   var subject = $('.contact input[id=defaultContactFormName]').val()
   var message = $('.contact textarea[id=exampleFormControlTextarea2]').val()
- 
   window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=eliyhaoo@gmail.com&su=${subject}&body=${email+'  '+message}`)
-  
   email.text('')
   subject.text('')
   message.text('')
 
 }
 
-function openEmailWindow() {
-}
 
 
 function _getDate(date){
